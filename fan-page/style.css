@@ -16,6 +16,8 @@ h6 {
 	font-size: 20px;
 }
 
+img { max-width: 100%; height: auto; }
+
 @media (min-width: 480px) {
 	body {
 		font-size: 26px; 
@@ -36,8 +38,15 @@ h6 {
 		padding: 0 30px;
 	}
 	.container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		display: grid;
+		grid-template-areas: 
+		"introduction image"
+		"quote image";
+		grid-template-columns: auto 500px;
+		grid-template-rows: auto auto;
+		gap: 20px;
 	}
+	.introduction { grid-area: introduction; }
+	.quote { grid-area: quote; }
+	img { grid-area: image; }
 }
