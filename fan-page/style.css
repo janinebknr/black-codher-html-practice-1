@@ -32,7 +32,12 @@ h6 {
 		font-size: 50px;
 	}
 	
-	section {
+	main {
 		padding: 0 30px;
+	}
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 }
